@@ -13,7 +13,7 @@ for /f "tokens=1" %%g in ('ls "%ADDONS_FOLDER%" ^| findstr elvui-master*') do (
 		rmdir /S /Q "%ADDONS_FOLDER%\%%~nxa"
 		move /Y "%%a" "%ADDONS_FOLDER%"
 	)
-	echo rmdir /S /Q %ADDONS_FOLDER%\%%g
+	rmdir /S /Q %ADDONS_FOLDER%\%%g
 )
 call del /S /Q %ZIP_FILE%
 
